@@ -73,7 +73,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" className="py-16 sm:py-20 md:py-24 bg-muted/30 relative">
+    <section id="kontakt" className="py-16 sm:py-20 md:py-24 bg-muted/30 relative scroll-mt-28 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,7 +108,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-2 space-y-6"
+            className="lg:col-span-2 space-y-6 w-full max-w-full"
           >
             {contactInfo.map((item, index) => (
               <div
@@ -118,9 +118,9 @@ const Contact = () => {
                 <div className={`w-12 h-12 rounded-xl ${index % 2 === 0 ? 'bg-gradient-hero' : 'bg-gradient-accent'} flex items-center justify-center flex-shrink-0`}>
                   <item.icon className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <h4 className="font-semibold text-foreground">{item.title}</h4>
-                  <p className="text-muted-foreground">{item.content}</p>
+                  <p className="text-muted-foreground break-words">{item.content}</p>
                 </div>
               </div>
             ))}
@@ -129,9 +129,9 @@ const Contact = () => {
               <h4 className="font-semibold text-foreground mb-4">Kontaktirajte nas direktno</h4>
               <div className="space-y-2 text-sm">
                 {emailContacts.map((item) => (
-                  <div key={item.email} className="flex items-center gap-2">
+                  <div key={item.email} className="flex flex-wrap items-center gap-2">
                     <span className="font-medium text-foreground">{item.label}:</span>
-                    <a href={`mailto:${item.email}`} className="text-primary hover:underline">{item.email}</a>
+                    <a href={`mailto:${item.email}`} className="text-primary hover:underline break-all">{item.email}</a>
                   </div>
                 ))}
               </div>
@@ -152,11 +152,11 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="lg:col-span-3"
+            className="lg:col-span-3 w-full max-w-full"
           >
             <form
               onSubmit={handleSubmit}
-              className="p-8 rounded-2xl bg-card border border-border/50 shadow-card"
+              className="p-5 sm:p-8 rounded-2xl bg-card border border-border/50 shadow-card"
             >
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
