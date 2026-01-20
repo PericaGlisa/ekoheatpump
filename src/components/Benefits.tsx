@@ -137,12 +137,6 @@ const Benefits = () => {
                 <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {benefit.description}
                 </p>
-
-                {/* Hover Arrow */}
-                <div className="mt-6 flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
-                  <span className="text-sm font-medium">Saznaj više</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
               </div>
             </motion.div>
           ))}
