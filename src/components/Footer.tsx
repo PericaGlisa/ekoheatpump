@@ -121,7 +121,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 sm:py-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4 pb-safe">
+        <div className="py-6 sm:py-8 border-t border-white/10 flex flex-col-reverse sm:flex-row justify-between items-center gap-4 pb-safe">
           <p className="text-white/40 text-xs sm:text-sm flex items-center gap-2 text-center sm:text-left">
             © {currentYear} EKO Elektrofrigo. Napravljeno sa <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0" /> u Srbiji.
           </p>
