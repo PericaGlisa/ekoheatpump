@@ -22,18 +22,35 @@ const WaterHeater = () => {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-elevated">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-elevated group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+              
               <img
                 src={waterHeater}
                 alt="R290 Toplotna pumpa za sanitarnu vodu"
-                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center brightness-110 contrast-105 saturate-105 scale-110"
+                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center brightness-110 contrast-105 saturate-105 scale-110 transition-transform duration-700 group-hover:scale-115"
                 style={{ backgroundColor: 'hsl(var(--muted))' }}
               />
-              <div className="absolute top-4 sm:top-6 left-4 sm:left-6">
-                <Badge className="bg-gradient-accent text-white border-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm shadow-lg">
+              
+              {/* Floating Badges */}
+              <div className="absolute top-4 sm:top-6 left-4 sm:left-6 flex flex-col gap-2">
+                <Badge className="w-fit bg-gradient-accent text-white border-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm shadow-lg backdrop-blur-md">
                   <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                   R290 Eco
                 </Badge>
+                <Badge className="w-fit bg-white/90 text-primary border-0 px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm shadow-lg backdrop-blur-md">
+                  <Zap className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                  A++ Klasa
+                </Badge>
+              </div>
+
+              {/* Decorative elements */}
+              <div className="absolute top-1/2 right-4 sm:right-8 transform -translate-y-1/2">
+                <div className="flex flex-col gap-4">
+                  <div className="w-2 h-2 rounded-full bg-primary/40 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-accent/40 animate-pulse delay-75" />
+                  <div className="w-2 h-2 rounded-full bg-primary/40 animate-pulse delay-150" />
+                </div>
               </div>
             </div>
             
