@@ -220,15 +220,18 @@ const Hero = () => {
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1.2 }}
-                className="absolute bottom-1/3 right-0 sm:-right-4 z-20 glass-effect px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl shadow-elevated hidden xs:block"
+                className="absolute bottom-1/3 right-0 sm:-right-4 z-20 hidden xs:block"
               >
-                <div className="flex items-center gap-2">
+                <a 
+                  href="#kontakt"
+                  className="glass-effect px-3 sm:px-5 py-2 sm:py-3 rounded-lg sm:rounded-xl shadow-elevated flex items-center gap-2 hover:scale-105 transition-transform duration-300"
+                >
                   <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-gold" />
                   <div>
                     <div className="text-xs sm:text-sm font-bold text-accent">Zatražite ponudu</div>
                     <div className="text-[10px] sm:text-xs text-muted-foreground">Monoblock sistemi</div>
                   </div>
-                </div>
+                </a>
               </motion.div>
 
               {/* Quality Badge */}
