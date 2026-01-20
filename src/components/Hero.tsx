@@ -92,7 +92,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 max-w-lg leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-slate-700 font-medium mb-8 sm:mb-10 max-w-lg leading-relaxed drop-shadow-sm"
             >
               Revolucionarna tehnologija grejanja i hlađenja sa ekološkim R32 i R290 
               rashladnim gasovima. Uštedite do <span className="text-accent font-semibold">80% energije</span>.
