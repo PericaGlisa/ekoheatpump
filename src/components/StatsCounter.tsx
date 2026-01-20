@@ -16,7 +16,7 @@ const stats = [
     value: 100,
     suffix: "+",
     label: "Zadovoljnih kupaca",
-    description: "Porodica koje štede energiju",
+    description: "Porodice koje štede energiju",
     gradient: "bg-gradient-accent",
   },
   {
