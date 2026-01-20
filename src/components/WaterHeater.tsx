@@ -23,7 +23,6 @@ const WaterHeater = () => {
             className="relative order-2 lg:order-1"
           >
             <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white border border-white/20 group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
               
               <img
                 src={waterHeater}
