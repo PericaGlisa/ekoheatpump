@@ -22,14 +22,13 @@ const WaterHeater = () => {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-elevated group">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white border border-white/20 group">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10 opacity-50 group-hover:opacity-100 transition-opacity duration-700" />
               
               <img
                 src={waterHeater}
                 alt="R290 Toplotna pumpa za sanitarnu vodu"
-                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center brightness-110 contrast-105 saturate-105 scale-110 transition-transform duration-700 group-hover:scale-115"
-                style={{ backgroundColor: 'hsl(var(--muted))' }}
+                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center contrast-105 drop-shadow-2xl transition-transform duration-700 group-hover:scale-105 relative z-10 p-4 sm:p-8"
               />
               
               {/* Floating Badges */}
