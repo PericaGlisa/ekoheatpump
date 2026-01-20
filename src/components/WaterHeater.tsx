@@ -27,7 +27,7 @@ const WaterHeater = () => {
               <img
                 src={waterHeater}
                 alt="R290 Toplotna pumpa za sanitarnu vodu"
-                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center contrast-105 drop-shadow-2xl transition-transform duration-700 group-hover:scale-105 relative z-10 p-4 sm:p-8"
+                className="w-full h-[350px] sm:h-[450px] md:h-[550px] object-contain object-center contrast-105 transition-transform duration-700 group-hover:scale-105 relative z-10 p-4 sm:p-8"
               />
               
               {/* Floating Badges */}
