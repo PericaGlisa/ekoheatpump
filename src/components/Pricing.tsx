@@ -46,7 +46,7 @@ const PricingTable = ({ data }: { data: typeof pricingData.monoblockR32 }) => (
       <TableRow className="border-border/50 hover:bg-transparent">
         <TableHead className="text-muted-foreground">Model</TableHead>
         <TableHead className="text-muted-foreground">Snaga</TableHead>
-        <TableHead className="text-right text-muted-foreground">Cena (EUR)</TableHead>
+        <TableHead className="text-right text-muted-foreground">Ponuda</TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
@@ -57,8 +57,10 @@ const PricingTable = ({ data }: { data: typeof pricingData.monoblockR32 }) => (
         >
           <TableCell className="font-medium text-foreground">{item.model}</TableCell>
           <TableCell className="text-muted-foreground">{item.power}</TableCell>
-          <TableCell className="text-right font-semibold text-accent">
-            {item.price} €
+          <TableCell className="text-right">
+            <a href="#kontakt" className="text-sm font-medium text-accent hover:underline">
+              Pošaljite upit
+            </a>
           </TableCell>
         </TableRow>
       ))}
@@ -84,14 +86,14 @@ const Pricing = () => {
             className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full glass-effect mb-4 sm:mb-6"
           >
             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-accent" />
-            <span className="text-xs sm:text-sm font-medium">Cenovnik 2024</span>
+            <span className="text-xs sm:text-sm font-medium">Modeli i snage</span>
           </motion.div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4 sm:mb-6 font-display">
-            Transparentne 
-            <span className="text-gradient-brand"> cene</span>
+            Pregled 
+            <span className="text-gradient-brand"> modela</span>
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-2">
-            Sve cene su u EUR, bez PDV-a. Kontaktirajte nas za posebne ponude i popuste.
+            Kontaktirajte nas za detaljan cenovnik, posebne ponude i popuste.
           </p>
         </motion.div>
 
@@ -143,8 +145,8 @@ const Pricing = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center text-sm text-muted-foreground mt-8"
         >
-          * Cene mogu varirati u zavisnosti od lokacije i uslova montaže. 
-          Kontaktirajte nas za personalizovanu ponudu.
+          * Ponuda može varirati u zavisnosti od lokacije i uslova montaže. 
+          Kontaktirajte nas za besplatnu konsultaciju.
         </motion.p>
       </div>
     </section>

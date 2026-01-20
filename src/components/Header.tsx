@@ -52,7 +52,7 @@ const Header = () => {
   const navLinks = [
     { href: "/#proizvodi", label: "Proizvodi" },
     { href: "/#galerija", label: "Galerija" },
-    { href: "/#cenovnik", label: "Cenovnik" },
+    { href: "/#cenovnik", label: "Modeli" },
     { href: "/#prednosti", label: "Prednosti" },
     { href: "/#kontakt", label: "Kontakt" },
   ];
@@ -108,9 +108,12 @@ const Header = () => {
                 variant="ghost" 
                 size="sm" 
                 className="gap-2 text-muted-foreground hover:text-foreground hover:bg-transparent text-sm"
+                asChild
               >
-                <Phone className="w-4 h-4" />
-                <span className="hidden xl:inline">+381 11 375 72 87</span>
+                <a href="tel:+381113757287">
+                  <Phone className="w-4 h-4" />
+                  <span className="hidden xl:inline">+381 11 375 72 87</span>
+                </a>
               </Button>
               <Button 
                 size="sm" 

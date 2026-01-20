@@ -21,7 +21,6 @@ const Index = () => {
       <Products />
       <SystemDiagram />
       <WaterHeater />
-      <SavingsCalculator />
       <Gallery />
       <Pricing />
       <Benefits />

@@ -4,6 +4,7 @@ import { MapPin, Phone, Mail, Clock, Send, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 
 import { useToast } from "@/hooks/use-toast";
 
@@ -16,12 +17,22 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Telefon",
-    content: "+381 11 375 72 87 / +381 11 375 72 88",
+    content: (
+      <>
+        <a href="tel:+381113757287" className="hover:text-primary transition-colors">+381 11 375 72 87</a>
+        {" / "}
+        <a href="tel:+381113757288" className="hover:text-primary transition-colors">+381 11 375 72 88</a>
+      </>
+    ),
   },
   {
     icon: Mail,
     title: "Email",
-    content: "office@eef.rs",
+    content: (
+      <a href="mailto:office@eef.rs" className="hover:text-primary transition-colors">
+        office@eef.rs
+      </a>
+    ),
   },
   {
     icon: Clock,
@@ -44,11 +55,21 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
+    privacyAccepted: false,
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
+    if (!formData.privacyAccepted) {
+      toast({
+        title: "Greška",
+        description: "Morate prihvatiti politiku privatnosti da biste poslali upit.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     const recipients = "damnjanovic.nikola@eef.rs,office@eef.rs";
     const subject = encodeURIComponent(`Upit sa sajta - ${formData.name}`);
     const body = encodeURIComponent(
@@ -231,6 +252,25 @@ const Contact = () => {
                   required
                   className="bg-background resize-none"
                 />
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-center space-x-2">
+                  <Checkbox 
+                    id="privacy" 
+                    checked={formData.privacyAccepted}
+                    onCheckedChange={(checked) => 
+                      setFormData({ ...formData, privacyAccepted: checked as boolean })
+                    }
+                    required
+                  />
+                  <label
+                    htmlFor="privacy"
+                    className="text-sm text-muted-foreground leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                  >
+                    Saglasan sam sa <a href="/politika-privatnosti" className="text-primary hover:underline">politikom privatnosti</a>.
+                  </label>
+                </div>
               </div>
 
               <Button

@@ -120,9 +120,9 @@ const SystemDiagram = () => {
                 <div className={`w-10 h-10 rounded-lg ${feature.color} flex items-center justify-center flex-shrink-0`}>
                   <feature.icon className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground text-sm">{feature.title}</h4>
-                  <p className="text-xs text-muted-foreground">{feature.description}</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold text-foreground text-sm truncate">{feature.title}</h4>
+                  <p className="text-xs text-muted-foreground break-words">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -198,9 +198,9 @@ const SystemDiagram = () => {
                 <div className={`w-10 h-10 rounded-lg ${feature.color} flex items-center justify-center flex-shrink-0`}>
                   <feature.icon className="w-5 h-5 text-white" />
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground text-sm">{feature.title}</h4>
-                  <p className="text-xs text-muted-foreground">{feature.description}</p>
+                <div className="flex-1 min-w-0">
+                  <h4 className="font-semibold text-foreground text-sm truncate">{feature.title}</h4>
+                  <p className="text-xs text-muted-foreground break-words">{feature.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -213,7 +213,7 @@ const SystemDiagram = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="mt-10 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
         >
           {[
             { icon: Gauge, value: "2.5-26 kW", label: "Opseg snage", sublabel: "Za sve veličine objekata" },
@@ -223,7 +223,7 @@ const SystemDiagram = () => {
           ].map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
+              className="text-center p-4 sm:p-6 rounded-xl bg-card border border-border/50 hover:border-primary/30 transition-colors"
             >
               <stat.icon className="w-8 h-8 text-primary mx-auto mb-3" />
               <div className="text-2xl md:text-3xl font-bold text-gradient-brand">{stat.value}</div>
@@ -264,10 +264,6 @@ const SystemDiagram = () => {
                         <div className="font-medium text-foreground">{model.name}</div>
                         <div className="text-sm text-muted-foreground">{model.power}</div>
                       </div>
-                      <div className="text-right">
-                        <div className="font-bold text-primary">{model.price}</div>
-                        <div className="text-xs text-muted-foreground">bez PDV-a</div>
-                      </div>
                     </div>
                   ))}
                 </div>
@@ -275,7 +271,7 @@ const SystemDiagram = () => {
             ))}
           </div>
           <p className="text-center text-sm text-muted-foreground mt-6">
-            * Cene su informativne. Za tačnu ponudu kontaktirajte nas.
+            * Za tačnu ponudu i specifikacije kontaktirajte nas.
           </p>
         </motion.div>
       </div>

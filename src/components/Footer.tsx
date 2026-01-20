@@ -105,7 +105,7 @@ const Footer = () => {
               {[
                 { href: "/#proizvodi", label: "Proizvodi" },
                 { href: "/#galerija", label: "Galerija" },
-                { href: "/#cenovnik", label: "Cenovnik" },
+                { href: "/#cenovnik", label: "Modeli" },
                 { href: "/#prednosti", label: "Prednosti" },
                 { href: "/#kontakt", label: "Kontakt" },
               ].map((item) => (

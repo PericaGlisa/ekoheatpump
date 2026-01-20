@@ -203,11 +203,16 @@ const Products = () => {
                     ))}
                   </ul>
 
-                  <div className="flex items-center justify-between pt-6 border-t border-border/50">
-                    <div>
-                      <span className="text-sm text-muted-foreground">Cena</span>
-                      <div className="text-3xl font-bold text-gradient-brand">{product.price}</div>
-                    </div>
+                  <div className="pt-6 border-t border-border/50">
+                    <Button 
+                      variant="ghost" 
+                      className="w-full group-hover:bg-primary group-hover:text-white transition-all duration-300"
+                      asChild
+                    >
+                      <a href="#kontakt">
+                        Zatražite ponudu <ArrowRight className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>

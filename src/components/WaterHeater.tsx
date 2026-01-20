@@ -45,8 +45,10 @@ const WaterHeater = () => {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="absolute -bottom-4 right-4 sm:bottom-6 sm:right-6 lg:-bottom-8 lg:-right-8 bg-gradient-premium text-white p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl shadow-elevated"
             >
-              <div className="text-xs sm:text-sm font-medium text-white/70 mb-0.5 sm:mb-1">Cena od</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-gradient-gold">1.825€</div>
+              <div className="text-xs sm:text-sm font-medium text-white/70 mb-0.5 sm:mb-1">Specijalna ponuda</div>
+              <a href="#kontakt" className="text-xl sm:text-2xl md:text-3xl font-bold text-gradient-gold hover:underline">
+                Zatražite cenu
+              </a>
             </motion.div>
           </motion.div>
 

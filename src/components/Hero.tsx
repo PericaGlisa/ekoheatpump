@@ -225,7 +225,7 @@ const Hero = () => {
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-gradient-gold" />
                   <div>
-                    <div className="text-xs sm:text-sm font-bold text-accent">od 2.499€</div>
+                    <div className="text-xs sm:text-sm font-bold text-accent">Zatražite ponudu</div>
                     <div className="text-[10px] sm:text-xs text-muted-foreground">Monoblock sistemi</div>
                   </div>
                 </div>
