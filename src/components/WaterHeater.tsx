@@ -22,7 +22,7 @@ const WaterHeater = () => {
             transition={{ duration: 0.8 }}
             className="relative order-2 lg:order-1"
           >
-            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl bg-white border border-white/20 group">
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white group">
               
               <img
                 src={waterHeater}
