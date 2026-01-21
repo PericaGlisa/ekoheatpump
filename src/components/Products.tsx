@@ -159,7 +159,8 @@ const Products = () => {
             <motion.div 
               key={product.id} 
               variants={itemVariants}
-              className="group"
+              whileHover={{ y: -10 }}
+              className="relative group h-full"
             >
               <Card className={`relative h-full overflow-hidden border-0 shadow-card hover:shadow-elevated transition-all duration-500 ${product.popular ? 'ring-2 ring-primary/20' : ''}`}>
                 {/* Popular Ribbon */}

@@ -102,12 +102,12 @@ const Header = () => {
               ))}
             </nav>
 
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-2 xl:gap-3">
+            {/* Desktop Actions */}
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3 ml-4">
               <Button 
                 variant="ghost" 
                 size="sm" 
-                className="gap-2 text-muted-foreground hover:text-foreground hover:bg-transparent text-sm"
+                className="gap-2 text-foreground font-semibold hover:bg-transparent text-base"
                 asChild
               >
                 <a href="tel:+381113757287">
@@ -117,12 +117,12 @@ const Header = () => {
               </Button>
               <Button 
                 size="sm" 
-                className="bg-gradient-hero hover:shadow-glow-primary transition-all duration-300 gap-2 px-4 xl:px-6 rounded-full text-sm"
+                className="bg-gradient-accent hover:shadow-glow-accent transition-all duration-300 gap-2 px-4 xl:px-6 rounded-full text-sm"
                 asChild
               >
                 <a href="/#kontakt">
                   <Sparkles className="w-4 h-4" />
-                  <span className="hidden xl:inline">Zatraži ponudu</span>
+                  <span className="hidden xl:inline">Zatražite ponudu</span>
                   <span className="xl:hidden">Ponuda</span>
                 </a>
               </Button>

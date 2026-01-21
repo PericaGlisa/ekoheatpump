@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Leaf, Thermometer, Zap, Award, Shield } from "lucide-react";
+import { ArrowRight, Leaf, Thermometer, Zap, Award, Shield, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroPump from "@/assets/hero-pump.jpg";
 
@@ -247,6 +247,23 @@ const Hero = () => {
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll Down Indicator */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 2, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer z-20 hidden sm:flex flex-col items-center gap-2"
+        onClick={() => document.getElementById('proizvodi')?.scrollIntoView({ behavior: 'smooth' })}
+      >
+        <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Istražite</span>
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <ChevronDown className="w-6 h-6 text-primary" />
+        </motion.div>
+      </motion.div>
 
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
